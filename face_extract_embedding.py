@@ -25,7 +25,6 @@ print(imagePaths)
 
 knownEmbeddings = []
 knownNames = []
-
 total = 0
 
 # Iterate over every single image

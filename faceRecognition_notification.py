@@ -70,7 +70,7 @@ class Activities:
             from_=self.FROM_NUMBER,
             to=self.TO_NUMBER
         )
-        print("Frame has been saved ")
+        print("Whatsapp message sent")
 
 
 # initialse a activity object
@@ -171,7 +171,7 @@ while True:
                 # change the timestamp when the frame was captured
                 activity.details_json[name]['timestamp'] = curr_timestamp
 
-    # show the current videostram or not
+    # show the current videostream or not
     if activity.show_video:
         # display the security feed
         cv2.imshow("Output", frame)

@@ -1,6 +1,5 @@
 import os
 
-
 def list_files(rootPath, validExtensions=(".jpg", ".jpeg", ".png")):
     # loop over the directory structure
     for (rootDir, dirNames, filenames) in os.walk(rootPath):

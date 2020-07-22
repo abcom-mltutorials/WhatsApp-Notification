@@ -13,7 +13,7 @@ detector = cv2.dnn.readNetFromCaffe(
     "face_detection_model/res10_300x300_ssd_iter_140000.caffemodel")
 
 
-# Load the embbeder model to extract a 128-D facial embedding vector
+# Load the embedder model to extract a 128-D facial embedding vector
 # It contains the OpenCV deep learning Torch embedding model.
 print("[EXEC] Loading face recognizer model....")
 embedder = cv2.dnn.readNetFromTorch("openface_nn4.small2.v1.t7")
@@ -75,7 +75,7 @@ for (i, imagePath) in enumerate(imagePaths):
             embedder.setInput(faceBlob)
             vec = embedder.forward()
 
-            # Append the name and the embeding vector
+            # Append the name and the embedding vector
             knownNames.append(name)
             knownEmbeddings.append(vec.flatten())
             total += 1

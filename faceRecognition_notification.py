@@ -28,7 +28,7 @@ class Activities:
         }
 
         self.FROM_NUMBER = "whatsapp:+14155238886"
-        self.TO_NUMBER = "whatsapp:+************"
+        self.TO_NUMBER = "whatsapp:+<YOUR MOBILE NUMBER>"
         self.min_confidence = 0.55
         self.max_captures = 1
         self.min_time_gap = 480
@@ -59,7 +59,7 @@ class Activities:
         p = os.path.sep.join(["motions_caught", "{}.png".format(
             str(get_name).capitalize())])
         cv2.imwrite(p, op_frame)
-        print("Whatsapp message sent")
+        print("image saved")
 
     # send whatsapp message to specific number via TWILIO API
     def send_message(self, get_name, timestamp):
@@ -70,10 +70,10 @@ class Activities:
             from_=self.FROM_NUMBER,
             to=self.TO_NUMBER
         )
-        print("Whatsapp message sent")
+        print("WhatsApp message sent")
 
 
-# initialse a activity object
+# initialize Activities
 activity = Activities()
 
 # Load videostream
